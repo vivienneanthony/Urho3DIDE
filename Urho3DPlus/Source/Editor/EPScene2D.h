@@ -84,6 +84,21 @@ namespace Urho3D
 		/// Destruct.
 		virtual ~EPScene2D();
 
+		virtual bool HasMainScreen() ;
+
+		virtual String GetName() const ;
+
+		virtual void Edit(Object *object) ;
+
+		virtual bool Handles(Object *object) const ;
+
+		virtual UIElement* GetMainScreen() ;
+
+		virtual void SetVisible(bool visible) ;
+
+		/***
+		  Original Code
+
 		virtual bool HasMainScreen() override;
 
 		virtual String GetName() const override;
@@ -94,7 +109,7 @@ namespace Urho3D
 
 		virtual UIElement* GetMainScreen() override;
 
-		virtual void SetVisible(bool visible) override;
+		virtual void SetVisible(bool visible) override;*/
 
 	protected:
 		SharedPtr<Window> window_;

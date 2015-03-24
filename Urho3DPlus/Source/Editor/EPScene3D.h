@@ -81,6 +81,17 @@ namespace Urho3D
 		/// Register object factory.
 		static void RegisterObject(Context* context);
 
+		virtual void Update(float timeStep) ;
+		/// React to resize.
+		virtual void OnResize() ;
+		/// React to mouse hover.
+		virtual void OnHover(const IntVector2& position, const IntVector2& screenPosition, int buttons, int qualifiers, Cursor* cursor) ;
+		/// React to mouse click begin.
+		virtual void OnClickBegin(const IntVector2& position, const IntVector2& screenPosition, int button, int buttons, int qualifiers, Cursor* cursor) ;
+		/// React to mouse click end.
+		virtual void OnClickEnd(const IntVector2& position, const IntVector2& screenPosition, int button, int buttons, int qualifiers, Cursor* cursor, UIElement* beginElement) ;
+
+        /* original code
 		virtual void Update(float timeStep) override;
 		/// React to resize.
 		virtual void OnResize() override;
@@ -90,6 +101,7 @@ namespace Urho3D
 		virtual void OnClickBegin(const IntVector2& position, const IntVector2& screenPosition, int button, int buttons, int qualifiers, Cursor* cursor) override;
 		/// React to mouse click end.
 		virtual void OnClickEnd(const IntVector2& position, const IntVector2& screenPosition, int button, int buttons, int qualifiers, Cursor* cursor, UIElement* beginElement) override;
+        */
 
 		/// Define the scene and camera to use in rendering. When ownScene is true the View3D will take ownership of them with shared pointers.
 		void SetView(Scene* scene, bool ownScene = true);
@@ -190,6 +202,18 @@ namespace Urho3D
 		/// Destruct.
 		virtual ~EPScene3D();
 
+		virtual bool	HasMainScreen() ;
+		virtual String	GetName() const ;
+		virtual void	Edit(Object *object) ;
+		virtual bool	Handles(Object *object) const ;
+		/// calls Start, because EPScene3D is a main Editor plugin
+		///	GetMainScreen will be called in AddEditorPlugin() once, so use it as Start().
+		virtual UIElement*	GetMainScreen() ;
+		virtual void		SetVisible(bool visible) ;
+		virtual void		Update(float timeStep) ;
+
+
+        /** Original code
 
 		virtual bool	HasMainScreen() override;
 		virtual String	GetName() const override;
@@ -200,6 +224,7 @@ namespace Urho3D
 		virtual UIElement*	GetMainScreen() override;
 		virtual void		SetVisible(bool visible) override;
 		virtual void		Update(float timeStep) override;
+        */
 
 		// debug handling
 		void ToggleRenderingDebug()	{ renderingDebug = !renderingDebug; }

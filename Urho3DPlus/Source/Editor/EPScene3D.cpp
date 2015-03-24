@@ -147,7 +147,7 @@ namespace Urho3D
 		/// debug handling
 		renderingDebug = false;
 		physicsDebug = false;
-		octreeDebug = false;*/
+		octreeDebug = false;
 
         /// mouse pick handling
 		pickMode = PICK_GEOMETRIES;
@@ -155,7 +155,7 @@ namespace Urho3D
 		editMode = EDIT_MOVE;
 		axisMode = AXIS_WORLD;
 		fillMode = FILL_SOLID;
-		snapScaleMode = SNAP_SCALE_FULL;*/
+		snapScaleMode = SNAP_SCALE_FULL;
 
 				/// scene update handling
 		runUpdate = false;
@@ -2191,12 +2191,14 @@ namespace Urho3D
 		gridNode_->SetScale(Vector3(8.0f, 8.0f, 8.0f));
 
 		if (!updateGridGeometry)
-			return;
+		{
+		    return;
+		}
 
-		unsigned int size = unsigned int(floor(8.0f / 2.0f) * 2.0f);
+		unsigned int size = (unsigned int)(floor(8.0f / 2.0f) * 2.0f);
 		float halfSizeScaled = size / 2.0f;
 		float scale = 1.0f;
-		unsigned int subdivisionSize = unsigned int(pow(2.0f, 3.0f));
+		unsigned int subdivisionSize = (unsigned int)(pow(2.0f, 3.0f));
 
 		if (subdivisionSize > 0)
 		{
