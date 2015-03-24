@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Urho3DProject>
+  <attribute name="Name" value="ProjectCpp" />
+  <attribute name="Icon" value="NoLogo.png" />
+  <attribute name="Resource Folders" value="CoreData;Data;ProjectData" />
+  <attribute name="Main Scene" value="" />
+  <attribute name="Main Script" value="" />
+</Urho3DProject>

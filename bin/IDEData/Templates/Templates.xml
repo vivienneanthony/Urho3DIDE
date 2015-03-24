@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Templates>
+  <Template name="ProjectCPP" folder="ProjectCPP" />
+  <Template name="ProjectEmpty" folder="ProjectEmpty" />
+  <Template name="Project3D" folder="Project3D" />
+  <Template name="Project2D" folder="Project2D" />
+</Templates>

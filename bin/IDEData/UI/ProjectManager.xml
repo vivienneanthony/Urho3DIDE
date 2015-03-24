@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<element>
+  <attribute name="Name" value="ProjectManager" />
+  <attribute name="Is Movable" value="false" />
+  <attribute name="Is Resizable" value="false" />
+  <attribute name="Position" value="0 0" />
+  <attribute name="Horiz Alignment" value="Center" />
+  <attribute name="Vert Alignment" value="Center" />
+  <attribute name="Size" value="1024 768" />
+  <attribute name="Layout Mode" value="Vertical" />
+  <element>
+    <attribute name="Min Size" value="0 26" />
+    <attribute name="Max Size" value="2147483647 26" />
+    <attribute name="Layout Mode" value="Horizontal" />
+    <element type="Text">
+      <attribute name="Text" value="Welcome to Sviga - Project Manager" />
+      <attribute name="Font Size" value="16" />
+      <attribute name="Text Alignment" value="Center" />
+      <attribute name="Color" value="0.8 0.8 1 1"/>
+    </element>
+  </element>
+  <element type="BorderImage" >
+    <attribute name="Image Rect" value="144 32 160 43" />
+    <attribute name="Border" value="4 4 4 4" />
+    <attribute name="Min Size" value="0 11" />
+    <attribute name="Layout Border" value="1 15 1 1" />
+    <attribute name="Max Size" value="2147483647 11" />
+  </element>
+  <element>
+    <attribute name="Name" value="ProjectManagerWindow" />
+    <attribute name="Min Size" value="0 25" />
+    <attribute name="Max Size" value="2147483647 2147483647" />
+    <attribute name="Layout Mode" value="Vertical" />
+    <attribute name="Layout Spacing" value="4" />
+    <element type="Button">
+      <attribute name="Name" value="NewButton" />
+      <attribute name="Min Size" value="70 25" />
+      <attribute name="Max Size" value="1200 25" />
+      <attribute name="Layout Mode" value="Horizontal" />
+      <attribute name="Layout Border" value="1 5 1 1" />
+      <element type="Text">
+        <attribute name="Text" value="New Project" />
+        <attribute name="Text Alignment" value="Center" />
+      </element>
+    </element>
+    <element type="ListView" style="HierarchyListView">
+      <attribute name="Name" value="HierarchyList" />
+      <attribute name="Highlight Mode" value="Always" />
+      <attribute name="Multiselect" value="true" />
+    </element>
+  </element>
+  <element type="BorderImage" >
+    <attribute name="Image Rect" value="144 32 160 43" />
+    <attribute name="Border" value="4 4 4 4" />
+    <attribute name="Min Size" value="0 11" />
+    <attribute name="Layout Border" value="1 15 1 1" />
+    <attribute name="Max Size" value="2147483647 11" />
+  </element>
+  <element type="Button">
+    <attribute name="Name" value="OpenButton" />
+    <attribute name="Min Size" value="70 25" />
+    <attribute name="Max Size" value="1200 25" />
+    <attribute name="Layout Mode" value="Horizontal" />
+    <attribute name="Layout Border" value="1 5 1 1" />
+    <element type="Text">
+      <attribute name="Text" value="Open" />
+      <attribute name="Text Alignment" value="Center" />
+    </element>
+  </element>
+  <element type="Button">
+    <attribute name="Name" value="QuitButton" />
+    <attribute name="Min Size" value="70 25" />
+    <attribute name="Max Size" value="1200 25" />
+    <attribute name="Layout Mode" value="Horizontal" />
+    <attribute name="Layout Border" value="1 5 1 1" />
+    <element type="Text">
+      <attribute name="Text" value="Quit" />
+      <attribute name="Text Alignment" value="Center" />
+    </element>
+  </element>
+</element>

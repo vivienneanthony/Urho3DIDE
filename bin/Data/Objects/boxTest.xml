@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<node id="6">
+	<attribute name="Is Enabled" value="true" />
+	<attribute name="Name" value="Box" />
+	<attribute name="Position" value="0.055109 0.594299 0.653738" />
+	<attribute name="Rotation" value="0.999947 0 0.0103017 0" />
+	<attribute name="Scale" value="1 1 1" />
+	<attribute name="Variables" />
+	<component type="StaticModel" id="7">
+		<attribute name="Model" value="Model;Models/Box.mdl" />
+		<attribute name="Material" value="Material;Materials/Stone.xml" />
+		<attribute name="Cast Shadows" value="true" />
+	</component>
+</node>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Urho3DProject>
+  <attribute name="Name" value="Empty" />
+  <attribute name="Icon" value="Logo.png" />
+  <attribute name="Resource Folders" value="res/CoreData;res/Data" />
+  <attribute name="Main Script" value="Scripts/01_HelloWorld.as" />
+  <attribute name="Main Scene" value="Scenes/SceneLoadExample.xml" />
+</Urho3DProject>
