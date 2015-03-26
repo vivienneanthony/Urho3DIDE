@@ -11,7 +11,7 @@ namespace Urho3D
 
 	EVENT(E_QUIT_INGAMEEDITOR_, QuitInGameEditor)
 	{
-	
+
 	}
 	EVENT(E_START_INGAMEEDITOR_, StartInGameEditor)
 	{
@@ -91,7 +91,7 @@ namespace Urho3D
 		Node* GetCameraNode();
 
 	protected:
-		/// Input Events Handler 
+		/// Input Events Handler
 		void HandleKeyDown(StringHash eventType, VariantMap& eventData);
 		void HandleKeyUp(StringHash eventType, VariantMap& eventData);
 		void HandleUpdate(StringHash eventType, VariantMap& eventData);
@@ -121,11 +121,11 @@ namespace Urho3D
 		SharedPtr<MiniToolBarUI>	minitoolbar_;
 		SharedPtr<HierarchyWindow>		hierarchyWindow_;
 		SharedPtr<AttributeInspector>	attributeInspector_;
-		
+
 		EditorPlugin*			mainEditorPlugin_;
 		Vector<EditorPlugin*>	activeSubEditorPlugins_;
 		Vector<EditorPlugin*>	mainEditorPlugins_;
-		Vector<SharedPtr<EditorPlugin>> allEditorPlugins_;
+		Vector<SharedPtr<EditorPlugin> > allEditorPlugins_;
 
 		SharedPtr<Camera>	camera_;
 		SharedPtr<Node>		cameraNode_;

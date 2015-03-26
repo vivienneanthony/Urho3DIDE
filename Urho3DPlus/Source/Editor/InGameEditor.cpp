@@ -124,7 +124,7 @@ namespace Urho3D
 		//////////////////////////////////////////////////////////////////////////
 		/// create default editor plugins
 
-		SharedPtr<PluginScene3DEditor> scene3dEditor(new PluginScene3DEditor(context_));
+		SharedPtr< PluginScene3DEditor > scene3dEditor(new PluginScene3DEditor(context_));
 
 		RegisterEditorPlugin(scene3dEditor);
 		mainEditorPlugin_ = scene3dEditor;
@@ -172,7 +172,7 @@ namespace Urho3D
 				// Subscribe HandleUpdate() function for processing update events
 				SubscribeToEvent(E_UPDATE, HANDLER(InGameEditor, HandleUpdate));
 				SetMainEditor(PluginScene3DEditor::GetTypeStatic());
-	
+
 			}
 			else
 			{
@@ -217,7 +217,7 @@ namespace Urho3D
 		if (plugin)
 		{
 			SharedPtr<EditorPlugin> editorplugin(plugin);
-			Vector<SharedPtr<EditorPlugin>>::Iterator it = allEditorPlugins_.Find(editorplugin);
+			Vector<SharedPtr<EditorPlugin> >::Iterator it = allEditorPlugins_.Find(editorplugin);
 
 			if (it == allEditorPlugins_.End())
 			{
@@ -560,7 +560,7 @@ namespace Urho3D
 	void RegisterInGameEditor(Context* context)
 	{
 		ResourcePickerManager::RegisterObject(context);
-	
+
 		InGameEditor::RegisterObject(context);
 		MenuBarUI::RegisterObject(context);
 		ToolBarUI::RegisterObject(context);

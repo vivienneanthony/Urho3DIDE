@@ -24,14 +24,14 @@ namespace Urho3D
 
 		ProjectSettings* GetSelectedTemplate();
 
-		Vector<SharedPtr<ProjectSettings>>& GetTemplateProjects();
+		Vector<SharedPtr<ProjectSettings> >& GetTemplateProjects();
 
 		UIElement* GetContainer();
 		String GetTemplatesPath() { return templatesPath_; }
 	protected:
 		void HandleMouseClick(StringHash eventType, VariantMap& eventData);
 		SharedPtr<Text> slectedText_;
-		Vector<SharedPtr<ProjectSettings>> templateProjects_;
+		Vector<SharedPtr<ProjectSettings> > templateProjects_;
 		ProjectSettings* selectedtemplate_;
 		String templatesPath_;
 	};

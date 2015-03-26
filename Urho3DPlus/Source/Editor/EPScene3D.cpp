@@ -1036,7 +1036,11 @@ namespace Urho3D
 				return;
 
 			PODVector<RayQueryResult> result_;
-			editorScene->GetComponent<Octree>()->RaycastSingle(RayOctreeQuery(result_,cameraRay, RAY_TRIANGLE, camera_->GetFarClip(),pickModeDrawableFlags[pickMode], 0x7fffffff));
+			///editorScene->GetComponent<Octree>()->RaycastSingle(RayOctreeQuery(result_,cameraRay, RAY_TRIANGLE, camera_->GetFarClip(),pickModeDrawableFlags[pickMode], 0x7fffffff));
+
+                RayOctreeQuery query(result_,cameraRay, RAY_TRIANGLE, camera_->GetFarClip(), pickModeDrawableFlags[pickMode], 0x7fffffff);
+                editorScene->GetComponent<Octree>()->RaycastSingle(query);
+
 
 			if (result_.Size() != 0 && result_[0].drawable_ != NULL)
 			{
@@ -2405,7 +2409,10 @@ namespace Urho3D
 
 	void EPScene3DView::OpenViewportSettingsWindow()
 	{
-		UpdateSettingsUI(StringHash::ZERO, VariantMap());
+		//RewriteUpdateSettingsUI(StringHash::ZERO, VariantMap());
+		VariantMap * Map;
+
+        UpdateSettingsUI(StringHash::ZERO, *Map);
 
 		settingsWindow->SetVisible(true);
 		settingsWindow->BringToFront();
@@ -2515,7 +2522,14 @@ namespace Urho3D
 	void EPScene3DView::SetOrthographic(bool orthographic)
 	{
 		camera_->SetOrthographic(orthographic);
-		UpdateSettingsUI(StringHash::ZERO, VariantMap());
+
+            /// rewrite
+		VariantMap * Map;
+
+        UpdateSettingsUI(StringHash::ZERO, *Map);
+
+		///UpdateSettingsUI(StringHash::ZERO, VariantMap());
+
 	}
 
 	void EPScene3DView::HandleResize()
@@ -2574,7 +2588,12 @@ namespace Urho3D
 	void EPScene3DView::ToggleViewportSettingsWindow(StringHash eventType, VariantMap& eventData)
 	{
 		if (settingsWindow->IsVisible())
-			CloseViewportSettingsWindow(StringHash::ZERO, VariantMap());
+{
+
+
+            VariantMap * Map;
+			CloseViewportSettingsWindow(StringHash::ZERO, *Map);
+}
 		else
 			OpenViewportSettingsWindow();
 	}

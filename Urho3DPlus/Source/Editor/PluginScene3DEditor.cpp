@@ -1,10 +1,10 @@
 #include "PluginScene3DEditor.h"
 #include "EditorPlugin.h"
 #include "InGameEditor.h"
-#include "..\Graphics\Camera.h"
-#include "..\Scene\Node.h"
-#include "..\Input\Input.h"
-#include "..\UI\UI.h"
+#include "../Graphics/Camera.h"
+#include "../Scene/Node.h"
+#include "../Input/Input.h"
+#include "../UI/UI.h"
 #include "InputActionSystem.h"
 
 namespace Urho3D
@@ -48,25 +48,25 @@ namespace Urho3D
 // 			{
 // 				ActionState* editorInputState = new ActionState(context_);
 // 				editorInputState->SetName("EditorInputState");
-// 
+//
 // 				editorInputState->AddInputState(&AS_MOVEFORWARD);
 // 				editorInputState->AddInputState(&AS_MOVEBACKWARD);
 // 				editorInputState->AddInputState(&AS_MOVELEFT);
 // 				editorInputState->AddInputState(&AS_MOVERIGHT);
-// 
+//
 // 				editorInputState->AddInputState(&AS_ROTHORI);
 // 				editorInputState->AddInputState(&AS_ROTVERT);
-// 
+//
 // 				editorInputState->AddInputState(&AS_FASTER);
-// 
+//
 // 				inputSystem->RegisterActionState(editorInputState);
-// 
+//
 // 				inputSystem->Push("EditorInputState");
 // 			}
-// 
+//
 // 			initialized_ = true;
 // 		}
-// 
+//
 // 		cameraNode_ = editor_->GetCameraNode();
 // 		camera_ = cameraNode_->GetComponent<Camera>();
 // 		SubscribeToEvent(E_INPUTACTION, HANDLER(PluginScene3DEditor, HandleInputAction));
@@ -102,7 +102,7 @@ namespace Urho3D
 		// Movement speed as world units per second
 		if (AS_FASTER.IsActive())
 			MOVE_SPEED = 60.0f;
-		
+
 
 		if (AS_ROTHORI.IsActive() && AS_ROTVERT.IsActive())
 		{

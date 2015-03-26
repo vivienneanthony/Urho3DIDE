@@ -93,9 +93,9 @@ namespace Urho3D
 
 			if (folder.StartsWith("/"))
 			{
-				folder.Erase(0);	
+				folder.Erase(0);
 			}
-				
+
 
 			if (!folder.EndsWith("/"))
 				folder.Append("/");
@@ -103,7 +103,7 @@ namespace Urho3D
 			projPath.Append(folder );
 
 			if (fileSystem->FileExists(projPath + "Urho3DProject.xml"))
-			{		
+			{
 				XMLFile* xmlFile = cache->GetResource<XMLFile>(projPath + "Urho3DProject.xml");
 
 				SharedPtr<ProjectSettings> proj(new ProjectSettings(context_));
@@ -123,7 +123,7 @@ namespace Urho3D
 		return selectedtemplate_;
 	}
 
-	Vector<SharedPtr<ProjectSettings>>& TemplateManager::GetTemplateProjects()
+	Vector<SharedPtr<ProjectSettings> >& TemplateManager::GetTemplateProjects()
 	{
 		return templateProjects_;
 	}
@@ -142,7 +142,7 @@ namespace Urho3D
 		UIElement* templist = new UIElement(context_);
 		templist->SetLayout(LM_HORIZONTAL, 4);
 		container->SetContentElement(templist);
-		
+
 		container->SetStyleAuto();
 
 

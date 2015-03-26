@@ -200,7 +200,8 @@ namespace Urho3D
 		AppState*	GetToState();
 		void		TransitionComplete();
 
-		virtual void	End() override;
+		//virtual void	End() override;
+		virtual void	End();
 		virtual bool	IsTransitionState() const { return true; }
 
 
