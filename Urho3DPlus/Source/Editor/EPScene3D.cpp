@@ -1036,8 +1036,7 @@ namespace Urho3D
 				return;
 
 			PODVector<RayQueryResult> result_;
-			editorScene->GetComponent<Octree>()->RaycastSingle(RayOctreeQuery(result_,cameraRay, RAY_TRIANGLE, camera_->GetFarClip(),
-				pickModeDrawableFlags[pickMode], 0x7fffffff));
+			editorScene->GetComponent<Octree>()->RaycastSingle(RayOctreeQuery(result_,cameraRay, RAY_TRIANGLE, camera_->GetFarClip(),pickModeDrawableFlags[pickMode], 0x7fffffff));
 
 			if (result_.Size() != 0 && result_[0].drawable_ != NULL)
 			{
@@ -1546,6 +1545,7 @@ namespace Urho3D
 		MakeBackup(fileName);
 		File file(context_, fileName, FILE_WRITE);
 		String extension = GetExtension(fileName);
+
 		bool success = (extension != ".xml" ? editorData_->GetEditorScene()->Save(file) : editorData_->GetEditorScene()->SaveXML(file));
 		RemoveBackup(success, fileName);
 
@@ -2382,6 +2382,8 @@ namespace Urho3D
 	{
 		ResetCamera();
 	}
+
+
 
 	void EPScene3DView::CloseViewportSettingsWindow(StringHash eventType, VariantMap& eventData)
 	{

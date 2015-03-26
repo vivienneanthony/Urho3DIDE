@@ -1,5 +1,5 @@
 # Urho3DIDE
-My first try of an IDE for the Urho3D Engine, WIP, help welcome
+Copy of Scorvi work being updated
 
 # WIP does not work 
 
