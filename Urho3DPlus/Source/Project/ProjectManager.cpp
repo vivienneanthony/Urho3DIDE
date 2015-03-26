@@ -58,7 +58,7 @@ namespace Urho3D
 		cache_ = GetSubsystem<ResourceCache>();
 		graphics_ = GetSubsystem<Graphics>();
 		ui_ = GetSubsystem<UI>();
-		
+
 		dirSelector_ = NULL;
 		selectedtemplate_ = NULL;
 	}
@@ -79,7 +79,7 @@ namespace Urho3D
 			if (!fileSystem->DirExists(projectdir))
 			{
 				int  ret = -1;
-				///  \todo 
+				///  \todo
 #ifdef _WINDOWS
 
 				String command = "xcopy " + GetNativePath(templatedir) + " " + GetNativePath(projectdir) + " /e /i /h";
@@ -104,7 +104,7 @@ namespace Urho3D
 				{
 					UpdateProjects(projectsRootDir_);
 					selectedProject_ = newProject_;
-					
+
 
 					FileSystem* fileSystem = GetSubsystem<FileSystem>();
 
@@ -121,11 +121,11 @@ namespace Urho3D
 					if (b)
 						b->SetText(selectedProject_->name_);
 				}
-					
+
 			}
 			else
 				LOGERRORF("Project %s does already exists", newProject_->name_.CString());
-			
+
 			selectedtemplate_ = NULL;
 		}
 
@@ -214,7 +214,7 @@ namespace Urho3D
 				if (newProjectAttrCont_)
 					newProjectAttrCont_->SetSerializableAttributes(newProject_);
 			}
-			
+
 		}
 	}
 
@@ -414,7 +414,7 @@ namespace Urho3D
 		}
 
 		tempview->AddChild(TemplateScrollView);
-	
+
 		newProject_ = new ProjectSettings(context_);
 
 		newProjectAttrCont_ = new AttributeContainer(context_);
@@ -451,7 +451,7 @@ namespace Urho3D
 
 		if (ok_)
 			NewProject();
-					
+
 	}
 
 	void ProjectManager::HandleOpenProject(StringHash eventType, VariantMap& eventData)
@@ -460,7 +460,7 @@ namespace Urho3D
 		{
 			OpenProject(selectedProject_.Get());
 		}
-		
+
 	}
 
 	void ProjectManager::HandleChangeRootDir(StringHash eventType, VariantMap& eventData)
@@ -488,7 +488,7 @@ namespace Urho3D
 			Text* b = NULL;
 			b = dynamic_cast<Text*>(welcomeUI_->GetChild("OpenText", true));
 			if (b)
-				b->SetText(selectedProject_->name_);		
+				b->SetText(selectedProject_->name_);
 		}
 	}
 
@@ -519,8 +519,8 @@ namespace Urho3D
 		ATTRIBUTE("Name", String, name_, String("noName"), AM_FILE);
 		ATTRIBUTE("Icon", String, icon_, String::EMPTY, AM_FILE);
 		ATTRIBUTE("Resource Folders", String, resFolders_, String::EMPTY, AM_FILE);
-		ATTRIBUTE("Main Script", String, mainScript_, String::EMPTY, AM_FILE);	
-		ATTRIBUTE("Main Scene", String, mainScene_, String::EMPTY, AM_FILE);	
+		ATTRIBUTE("Main Script", String, mainScript_, String::EMPTY, AM_FILE);
+		ATTRIBUTE("Main Scene", String, mainScene_, String::EMPTY, AM_FILE);
 	}
 
 	void ProjectSettings::CopyAttr(ProjectSettings* proj)

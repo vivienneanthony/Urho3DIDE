@@ -1,3 +1,9 @@
+#pragma once
+
+#ifndef PROJECTMANAGER_H
+#define PROJECTMANAGER_H
+
+
 /*!
  * \file ProjectManager.h
  *
@@ -6,8 +12,6 @@
  *
  *
  */
-
-#pragma once
 #include "../Core/Object.h"
 
 #include "../Scene/Serializable.h"
@@ -75,6 +79,9 @@ namespace Urho3D
 		const String&		GetRootDir();
 		ProjectSettings*	GetProject();
 
+		void SetProjectRootFolder(const String& path);
+
+
 	protected:
 		void HandleNewProject(StringHash eventType, VariantMap& eventData);
 		void HandleNewProjectAck(StringHash eventType, VariantMap& eventData);
@@ -110,6 +117,10 @@ namespace Urho3D
 		UI* ui_;
 		Graphics* graphics_;
 		IDESettings* settings_;
+
+		String projectsRootDir_;
 	private:
 	};
 }
+
+#endif

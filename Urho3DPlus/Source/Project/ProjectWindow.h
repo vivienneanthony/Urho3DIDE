@@ -10,6 +10,9 @@
 #pragma once
 #include "../Core/Object.h"
 
+#include "../../../IDE/Source/IDE/ProjectWindow.h"
+
+/*
 namespace Urho3D
 {
 	class ProjectSettings;
@@ -54,3 +57,4 @@ namespace Urho3D
 	private:
 	};
 }
+*/

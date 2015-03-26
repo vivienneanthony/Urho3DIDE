@@ -2,6 +2,9 @@
 
 #include "../Core/Object.h"
 
+#include "../../../IDE/Source/IDE/TemplateManager.h"
+
+/*
 namespace Urho3D
 {
 	class ProjectSettings;
@@ -37,3 +40,4 @@ namespace Urho3D
 	};
 }
 
+*/

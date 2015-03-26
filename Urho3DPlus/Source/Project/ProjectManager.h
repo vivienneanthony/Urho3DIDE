@@ -12,6 +12,9 @@
 
 #include "../Scene/Serializable.h"
 
+#include "../../../IDE/Source/IDE/ProjectManager.h"
+
+/*
 namespace Urho3D
 {
 	class UIElement;
@@ -117,3 +120,4 @@ namespace Urho3D
 	private:
 	};
 }
+*/
